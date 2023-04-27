@@ -3,12 +3,18 @@ package com.example.labpropuesto2.services;
 import com.example.labpropuesto2.models.Book;
 import com.example.labpropuesto2.repositories.BookRepository;
 
-public class BookService {
+import java.util.List;
 
-    public BookRepository bookRepository;
+public interface BookService {
 
-    public void addBook(Book book) {
-    bookRepository.save(book);
-    }
+    Book createBook(Book book);
+    Book getBookById (Long id);
+
+    List<Book> getAllBooks();
+
+    Book updateBook( Long id, Book book);
+
+    void deleteBook(Long id);
+    List<Book> serachBook(String keyword);
 
 }
