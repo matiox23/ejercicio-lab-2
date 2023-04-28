@@ -11,4 +11,12 @@ public interface ReviewService {
     Review getReviewByBookIdAndUserId(Long bookId, Long userId);
     Review updateReview(Long id, Review review);
     void deleteReview(Long id);
+
+    Review getReviewById(Long id);
+
+    Review addReview(Long bookId, Long userId, Review review);
+
+    Review addReview(Long bookId, Long userId, String title, String comment, Integer rating);
+
+    List<Review> getReviewsByUserId(Long userId);
 }
