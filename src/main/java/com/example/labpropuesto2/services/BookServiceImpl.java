@@ -6,6 +6,7 @@ import jakarta.persistence.EntityNotFoundException;
 import org.hibernate.proxy.EntityNotFoundDelegate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.swing.text.html.parser.Entity;
 import java.time.LocalDateTime;
@@ -56,6 +57,16 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<Book> searchBook(String keyword) {
+        return null;
+    }
+
+    @Override
+    public Book addBook(Book book) {
+        return bookRepository.save(book);
+    }
+
+    @Override
+    public Book addBook(String title, String author, String description, MultipartFile image) {
         return null;
     }
 
